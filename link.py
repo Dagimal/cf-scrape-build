@@ -2,6 +2,7 @@ import cloudscraper
 import sys
 import re
 from bs4 import BeautifulSoup
+from tqdm import tqdm
 
 OUTPUT_FILENAME = 'cf_link.txt'
 
@@ -13,7 +14,7 @@ scraper = cloudscraper.create_scraper()
 URL_PATTERN = ''
 
 def link_url():
-	for line in range(1405):
+	for line in tqdm(range(1405)):
 	#for line in page_link: # Use page_link variables
 		#url = scraper.get(line) # Use page_link variables
 		url = scraper.get(f'https://www.creativefabrica.com/subscriptions/fonts/script-handwritten/page/{line+1}')
