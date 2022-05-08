@@ -4,7 +4,7 @@ import re
 from bs4 import BeautifulSoup
 from tqdm import tqdm
 
-OUTPUT_FILENAME = 'cf_link.txt'
+OUTPUT_FILENAME = 'cf_fonts.txt'
 
 scraper = cloudscraper.create_scraper()
 
